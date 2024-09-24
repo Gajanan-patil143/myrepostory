@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install openjdk-8 on ubuntu
+      apt:
+        name: "{{ubuntujavapckg}}"
+        state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Install openjdk-8 on redhat
+      yum:
+        name: "{{redhatjavapckg}}"
+        state: present
+      when: ansible_os_family == "RedHat"
