@@ -1,0 +1,3 @@
+---
+ubuntujavapackg: "openjdk-8-jre"
+redhatinstall: "java-1.8.0-openjdk" 
